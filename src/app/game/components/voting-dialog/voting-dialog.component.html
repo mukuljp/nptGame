@@ -1,0 +1,19 @@
+<table  border=1>
+  <tr>
+    <th>player name</th>
+    <th *ngFor="let fieldName of data.room.fieldNamerray">{{fieldName}}</th>
+  </tr>
+  <tr *ngFor="let player of playerList">
+    <td>{{player.name}}</td>
+     <td *ngFor="let fieldVal of player.vote; let i = index">
+       <div>
+         <div><button [style.background]="fieldVal.vote===1?'red':'none'" (click)="upvote(fieldVal)" >+1</button></div>
+         <div>  -{{fieldVal.value}}-</div>
+         <div><button  [style.background]="fieldVal.vote===-1?'red':'none'" (click)="downvote(fieldVal)" >-1</button></div>
+       </div       >
+     
+       
+       </td>
+
+  </tr>
+</table>

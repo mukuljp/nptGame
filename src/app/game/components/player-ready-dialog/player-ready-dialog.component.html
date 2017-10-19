@@ -1,0 +1,12 @@
+<md-list>
+   <h3 md-subheader>Players</h3>
+   <md-list-item *ngFor="let player of playerList">
+      <md-icon md-list-icon>folder</md-icon>
+      <h4 md-line>{{player.name}}</h4>
+      <p md-line class="demo-2">  {{player.ready?"Ready":"waiting"}} </p>
+   </md-list-item>
+</md-list>
+{{countDownSeconds}}
+<button (click)="onReady()" [disabled]="disableReady">
+Ready
+</button>

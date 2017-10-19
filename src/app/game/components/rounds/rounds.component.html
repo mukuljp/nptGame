@@ -1,0 +1,27 @@
+  <p>
+  rounds works!
+</p>
+ <form [formGroup]="inputForm">
+   <button>{{countDownSeconds}} Seconds Remainig.</button>
+<table border="1">
+  <tr >
+  <th *ngFor="let fieldName of gameData.gameData.room.fieldNamerray">{{fieldName}}</th>
+  </tr>
+  <tr formArrayName="fieldNamerray">
+    <td *ngFor="let fieldNameControl of inputForm.controls.fieldNamerray.controls; let i=index" >
+       <md-input-container>
+    <input required [formControlName]="i" mdInput  type="text"  value="">
+     
+  </md-input-container>
+
+    </td>
+  </tr>
+  <tr  >
+    
+
+    <td >
+      <button>Submit</button>
+    </td>
+  </tr>
+</table>
+ </form>

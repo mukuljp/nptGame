@@ -1,0 +1,16 @@
+<md-card class="example-card">
+
+
+   <md-card-content>
+    <md-list>
+  <h3 md-subheader>Rooms</h3>
+  <md-list-item *ngFor="let room of rooms|roomArrayFilter">
+    <md-icon md-list-icon>folder</md-icon>
+    <h4 md-line>{{room.gameName}}</h4>
+   <button (click)="joinGame(room.gameName)" >Join This Room</button>
+  </md-list-item>
+ 
+</md-list>
+  </md-card-content>
+  
+</md-card>

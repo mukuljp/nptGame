@@ -1,0 +1,29 @@
+
+   <md-card class="example-card">
+  <md-card-header>
+   
+    <md-card-title><h1>Create Game Room</h1></md-card-title>
+    <md-card-subtitle>Game configeration</md-card-subtitle>
+     
+  </md-card-header>
+  
+  <md-card-content >
+<div style="text-align:center">
+  <form [formGroup]="joinGameForm" (ngSubmit)="joinGame()">
+     <div>
+  <md-input-container  class="example-full-width">
+    <input required formControlName="playerName" mdInput placeholder="Player Name"  value="">
+  </md-input-container>
+  </div>
+    
+   
+ 
+
+  <button md-button  type="submit"  class="buttonSubmit">Create Game Room</button>
+  </form>
+</div>
+</md-card-content>
+ 
+</md-card>
+ 
+

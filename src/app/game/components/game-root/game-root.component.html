@@ -1,0 +1,21 @@
+<p>
+  game-root works!
+</p>
+
+
+
+<div class="table">
+  <div class="row"  >
+    <div class="" >
+      <npt-user-profile [playerName]="gameData.gameData.playerName"></npt-user-profile>
+      <npt-room-list *ngIf="gameData.type==='join'&&gameData.gameData.room===null" [rooms]="gameData.gameData.rooms" (onJoin)="onJoin($event)" > </npt-room-list>
+      <npt-current-room  *ngIf="gameData.gameData.room!=null" [playerList]="gameData.gameData.room.playerList">  </npt-current-room>
+      </div>
+  
+  
+  </div>
+  <div class="row">
+    <div class="cell ">Cell 4</div>
+  </div>
+  
+</div>
